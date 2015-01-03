@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @member.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @member.email %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @member.phone %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @member.year %>
+</p>
+
+<p>
+  <strong>Mailbox:</strong>
+  <%= @member.mailbox %>
+</p>
+
+<p>
+  <strong>Experience:</strong>
+  <%= @member.experience %>
+</p>
+
+<p>
+  <strong>Car:</strong>
+  <%= @member.car %>
+</p>
+<p>
+<%= @member.json %> 
+</p>
+<%= javascript_tag do %>
+  window.sig = '<%= j @member.json %>';
+<% end %> 
+<div class="sigPad signed">
+  <div class="sigWrapper">
+  <div class="typed" > J Owen </div> 
+  <canvas class="pad" width="200" height="55"></canvas>
+  </div>
+  </div>
+<%= link_to 'Edit', edit_member_path(@member) %> |
+<%= link_to 'Back', members_path %>

@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @support.name %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @support.year %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @support.phone %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @support.email %>
+</p>
+
+<p>
+  <strong>Mailbox:</strong>
+  <%= @support.mailbox %>
+</p>
+
+<p>
+  <strong>Signature:</strong>
+  <%= @support.signature %>
+</p>
+
+<%= link_to 'Edit', edit_support_path(@support) %> |
+<%= link_to 'Back', supports_path %>

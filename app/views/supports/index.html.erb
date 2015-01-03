@@ -1,0 +1,37 @@
+<h1>Listing supports</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Year</th>
+      <th>Phone</th>
+      <th>Email</th>
+      <th>Mailbox</th>
+      <th>Signature</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @supports.each do |support| %>
+      <tr>
+        <td><%= support.name %></td>
+        <td><%= support.year %></td>
+        <td><%= support.phone %></td>
+        <td><%= support.email %></td>
+        <td><%= support.mailbox %></td>
+        <td><%= support.signature %></td>
+        <td><%= link_to 'Show', support %></td>
+        <td><%= link_to 'Edit', edit_support_path(support) %></td>
+        <td><%= link_to 'Destroy', support, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Support', new_support_path %>
