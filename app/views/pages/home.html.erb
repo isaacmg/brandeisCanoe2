@@ -14,13 +14,12 @@
     <div class="item active">
       <img src="http://whittlingfogphotography.smugmug.com/Events/Kenduskeag-Stream-Sprints/i-Kw8dHF2/0/X3/IMG_7787-X3.jpg" alt="First slide">
       <div class="container">
+    
         <div class="carousel-caption">
-          <h1>Support or Join today!</h1>
-          <p style="color:DarkOrange; background-color:black;">Members of the Brandeis Community can choose to either support or join the Canoe Club. If you choose to support the club your information will be used solely for the purposes of chartering
-          	 (we never contact you about paddling events). However, if you would like to participate choose join and you will be subscribed
-          	to the club's listserve. 
+          <h1>Take the Plunge!</h1>
+          <p style="color:DarkOrange; background-color:black;"> Do you want to paddle down senic New England rivers and run challenging sections of rapids? 
            </p>
-          <p><%= link_to('Support', new_support_path, :class => 'btn btn-large btn-primary')  %> <%= link_to('Join', new_member_path, :class => 'btn btn-large btn-primary')  %></p>
+          <p><%= link_to('Join Now!', new_user_registration_path, :class => 'btn btn-large btn-primary')  %></p>
         </div>
       </div>
     </div>
@@ -32,7 +31,7 @@
           <p style="color:DarkOrange; background-color:Black;">The Brandeis Canoe club was created to provide Brandeis students the opportunity to compete in downriver, slalom, and freestyle competitions at both the local and national level. 
          	Additionally, the Brandeis Canoe Club allows students to work on their whitewater skills and techniques in a controlled enviroment with other skilled paddlers and to experience the beautiful
          	and pristine whitewater of New England.</p>
-          <p><a class="btn btn-large btn-primary" href="#">Learn more</a></p>
+          <p> <%= link_to('About', page_path('abou'), :class => 'btn btn-large btn-primary')  %></p>
         </div>
       </div>
     </div>

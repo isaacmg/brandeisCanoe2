@@ -71,6 +71,6 @@ Brandeisww::Application.routes.draw do
     root :to => 'high_voltage/pages#show', id: 'home'
     get '/success' => 'high_voltage/pages#show', id: 'success'
      get '/page2' => 'high_voltage/pages#show', id: 'page2'
-
+	  get '/about' => 'high_voltage/abou#show', id: 'abou'
 
 end

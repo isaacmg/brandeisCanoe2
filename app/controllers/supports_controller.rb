@@ -5,11 +5,17 @@ class SupportsController < ApplicationController
   # GET /supports.json
   def index
     @supports = Support.all
+      puts "hi you fuckers" 
+    @client=request.remote_ip
+
+
+	puts @client 
   end
 
   # GET /supports/1
   # GET /supports/1.json
   def show
+
   end
 
   # GET /supports/new
