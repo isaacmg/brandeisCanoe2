@@ -13,4 +13,25 @@
  *= require_tree .
  *= require 'forem/base'
  */
-
+ul.hmenu {
+  list-style: none; 
+  
+  background-color: #036;
+   margin: 0;
+    padding: 0;
+}
+a:visited { 
+   color: yellow;
+}
+ul.hmenu li {
+  display: inline; 
+   color: white;
+}
+li:before {
+    content: "• ";
+    color: white; /* or whatever color you prefer */
+}
+body 
+{
+background-color: 	#330000; 
+}
