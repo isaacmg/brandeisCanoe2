@@ -46,7 +46,7 @@ end
 
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
-
+gem 'rack-zippy'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
   gem 'autoprefixer-rails'
@@ -55,3 +55,4 @@ end
  gem 'kaminari', '0.15.1'
  gem 'forem-bootstrap', github: "radar/forem-bootstrap"
  gem 'forem-redcarpet', github: "radar/forem-redcarpet"
+ 
