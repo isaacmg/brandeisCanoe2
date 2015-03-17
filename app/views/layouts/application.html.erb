@@ -13,19 +13,31 @@
 
 </head>
 <body>
-  <ul class="hmenu">
-    <% if user_signed_in? %>
+ <div id="loginBar" style="background-color:#248FB2">
+ <% if user_signed_in? %>
       <%= link_to current_user.email, main_app.edit_user_registration_path %>
       | <%= link_to "Sign out", main_app.destroy_user_session_path, :method => :delete %>
       <% if current_user.forem_admin %>
         | <%= link_to "Administrate", forem.admin_root_url %>
       <% end %>
+      
     <% else %>
-      <%= link_to "Sign up", main_app.new_user_registration_path %>
-      | <%= link_to "Sign in", main_app.new_user_session_path %>
-    <% end %>
-  </ul>
+  <%= form_for(:user, :url => session_path(:user)) do |f| %>
+  Log In
+  
+  <%= f.text_field :email, placeholder: 'Email'  %>
+  <%= f.password_field :password %>
+  <%= f.check_box :remember_me %>
+  <%= f.label :remember_me %>
+ <%= f.submit 'Sign in' %>
+  <%= link_to "Forgot your password?", new_password_path(:user) %>
+  <a href="https://www.facebook.com/groups/743459819055361/"> <img src="http://isaac26.com/pics/FB-f-Logo__white_50.png" style="width:29px;height:29px;border:0" >  </a>
+  <% end %>
+<% end %>
+</div>
 <%= yield %>
-
 </body>
+
+<p>    </p> 
+
 </html>

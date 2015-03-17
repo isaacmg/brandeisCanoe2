@@ -13,6 +13,11 @@
  *= require_tree .
  *= require 'forem/base'
  */
+ .loginBar
+{
+background-color: 	#00FFFF; 
+}
+
 ul.hmenu {
   list-style: none; 
   
@@ -20,6 +25,7 @@ ul.hmenu {
    margin: 0;
     padding: 0;
 }
+
 a:visited { 
    color: yellow;
 }
@@ -31,6 +37,8 @@ li:before {
     content: "• ";
     color: white; /* or whatever color you prefer */
 }
+ 
+
 body 
 {
 background-color: 	#330000; 
